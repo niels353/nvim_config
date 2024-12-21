@@ -4,6 +4,19 @@ vim.keymap.set("v", "<space>x", ":lua<CR>")
 
 require("config.lazy")
 
+-- options
+vim.opt.shiftwidth = 4
+vim.opt.number = true
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 10
+vim.opt.clipboard = "unnamedplus"
+
+-- keymaps
+vim.keymap.set("n", "<M-,>", "<c-w>5<")
+vim.keymap.set("n", "<M-.>", "<c-w>5>")
+vim.keymap.set("n", "<M-t>", "<C-W>+")
+vim.keymap.set("n", "<M-s>", "<C-W>-")
+
 -- Highlight when yanking (copying) text
 -- See `:help vim.highlight.on_yank()`
 vim.api.nvim_create_autocmd('TextYankPost', {
