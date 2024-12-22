@@ -12,10 +12,15 @@ vim.opt.scrolloff = 10
 vim.opt.clipboard = "unnamedplus"
 
 -- keymaps
-vim.keymap.set("n", "<M-,>", "<c-w>5<")
-vim.keymap.set("n", "<M-.>", "<c-w>5>")
-vim.keymap.set("n", "<M-t>", "<C-W>+")
-vim.keymap.set("n", "<M-s>", "<C-W>-")
+local set = vim.keymap.set
+
+set("n", "<M-,>", "<c-w>5<")
+set("n", "<M-.>", "<c-w>5>")
+
+set("n", "<c-j>", "<c-w><c-j>")
+set("n", "<c-k>", "<c-w><c-k>")
+set("n", "<c-l>", "<c-w><c-l>")
+set("n", "<c-h>", "<c-w><c-h>")
 
 -- Highlight when yanking (copying) text
 -- See `:help vim.highlight.on_yank()`
