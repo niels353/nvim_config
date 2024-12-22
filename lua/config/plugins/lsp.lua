@@ -1,7 +1,12 @@
 return {
   {
     "neovim/nvim-lspconfig", 
+    dependencies = {
+      'saghen/blink.cmp',
+    },
     config = function()
+      local capabilities = require('blink.cmp').get_lsp_capabilities()
+
       vim.keymap.set("n", "<space>ff", function() vim.lsp.buf.format() end)
 
       vim.api.nvim_create_autocmd('LspAttach', {
