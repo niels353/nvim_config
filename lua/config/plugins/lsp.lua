@@ -32,6 +32,7 @@ return {
       require("lspconfig").lua_ls.setup { capabilites = capabilities }
 
       vim.keymap.set("n", "<space>ff", function() vim.lsp.buf.format() end)
+      vim.keymap.set({ 'n', 'v' }, '<space>ca', function() vim.lsp.buf.code_action() end)
 
       vim.api.nvim_create_autocmd('LspAttach', {
         callback = function(args)
