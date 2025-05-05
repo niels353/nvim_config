@@ -6,6 +6,7 @@ return {
       require("conform").setup({
         formatters_by_ft = {
           markdown = { "prettierd" },
+          python = { "black" },
         }
       })
       vim.api.nvim_create_autocmd("BufWritePre", {

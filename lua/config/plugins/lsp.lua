@@ -31,6 +31,7 @@ return {
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       require("lspconfig").lua_ls.setup { capabilites = capabilities }
       require("lspconfig").clangd.setup { capabilites = capabilities }
+      require("lspconfig").basedpyright.setup { capabilites = capabilities }
 
       vim.keymap.set("n", "<space>ff", function() vim.lsp.buf.format() end)
       vim.keymap.set({ 'n', 'v' }, '<space>ca', function() vim.lsp.buf.code_action() end)
